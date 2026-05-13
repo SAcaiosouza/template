@@ -1,0 +1,36 @@
+{
+  "language": "portuguese",
+  "enabledMcpjsonServers": [
+    "code-review-graph"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(git diff *)",
+      "Bash(git status)",
+      "Bash(git log)",
+      "Bash(npm run test*)",
+      "Bash(npx jest *)",
+      "Bash(npx playwright *)",
+      "Bash(npx prisma *)",
+      "Bash(npm run lint*)",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Read",
+      "Replace",
+      "write_file",
+      "run_shell_command"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(*.pem)",
+      "Read(*.key)",
+      "Read(secrets/)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)"
+    ]
+  },
+  "mcpServers": {},
+  "autoMemoryEnabled": true
+}
