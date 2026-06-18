@@ -1,7 +1,7 @@
 {
     "version": "1.0",
     "project": "_template",
-    "workspace": "C:/Users/pcmut/Downloads/_projetos/_template",
+    "workspace": "C:/Users/pcmut/Documents/_projetos/_template",
     "agents": {
         "enabled": true,
         "directory": ".antigravity\\agents",

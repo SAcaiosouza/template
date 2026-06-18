@@ -1,7 +1,7 @@
 markdownExploder: true
 project:
-  type: greenfield
-  installedAt: '2026-05-13T17:48:38.303Z'
+  type: brownfield
+  installedAt: '2026-06-18T17:50:51.259Z'
   version: 2.1.0
 user_profile: bob
 ide:
@@ -9,12 +9,13 @@ ide:
     - claude-code
     - codex
     - gemini
+    - cursor
     - antigravity
   configs:
     vscode: false
     codex: true
     gemini: true
-    cursor: false
+    cursor: true
     github-copilot: false
     antigravity: true
     zed: false

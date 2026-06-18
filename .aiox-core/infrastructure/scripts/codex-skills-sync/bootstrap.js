@@ -456,7 +456,7 @@ function squadSkillId(squadName, entryAgent, squadAlias) {
   return `aiox-${squadBase || alias}-${entry}`;
 }
 
-function buildSkillContent({ skillId, title, whenToUse, sourcePath, scopePath, commands, greetingCommand }) {
+function buildSkillContent({ skillId, title, whenToUse, sourcePath, scopePath, commands }) {
   const starters = starterCommands(commands)
     .map((command) => `- \`${command.name}\` - ${command.description}`)
     .join('\n');
@@ -482,8 +482,7 @@ ${whenToUse}
 1. Read \`${sourcePath}\` as the source of truth.
 2. Adopt the persona, command system, dependencies, and activation instructions from that file.
 3. Resolve dependencies relative to \`${scopePath}\` unless the source file declares a more specific path.
-4. Use \`${greetingCommand || 'the source activation instructions'}\` when a canonical greeting is required.
-5. Stay in this persona until the user asks to switch or exit.
+4. Stay in this persona until the user asks to switch or exit.
 
 ## Starter Commands
 ${starters}
@@ -514,7 +513,6 @@ function buildCorePlans(projectRoot, yaml) {
         sourcePath,
         scopePath: '.aiox-core/development',
         commands: agent.commands,
-        greetingCommand: `node .aiox-core/development/scripts/generate-greeting.js ${agent.id}`,
       }),
     };
   });
